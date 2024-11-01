@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find ros_car_control)/config/car_controller.yaml" command="load"/>
+
+    <node name="car_controller_spawner" pkg="ros_car_control" type="car_control.py" respawn="false"
+    output="screen" />
+
+</launch>

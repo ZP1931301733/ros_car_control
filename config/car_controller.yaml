@@ -1,0 +1,7 @@
+pid_gain:                          # PID控制器参数
+    Kp: 0.5
+    Ki: 0.05
+    Kd: 0.05
+mod: PID_true                      # 模式切换，PID_ture算法控制车体角度，PID_false端口直接连接
+controller_rate: 10                # 控制器输出频率
+max_controller_output: 0.7854      # 控制器输出限幅
