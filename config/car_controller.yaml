@@ -1,7 +1,12 @@
-pid_gain:                          # PID控制器参数
-    Kp: 0.5
-    Ki: 0.05
-    Kd: 0.05
-mod: PID_true                      # 模式切换，PID_ture算法控制车体角度，PID_false端口直接连接
+straight_pid_gain:                          # 直行自适应PID控制器参数（与自适应量的函数关系y=gx 如：Kp=gKp*x）
+    gKp: 5
+    gKi: 1
+    gKd: 1
+turn_pid_gain:
+    Kp: 2
+    Ki: 0.2
+    Kd: 0.2
+mod: PID_true                      # 模式切换，PID_ture算法控制车体角度，PID_false端口直接连接(可在程序运行时在命令行切换)
 controller_rate: 10                # 控制器输出频率
 max_controller_output: 0.7854      # 控制器输出限幅
+turn_goal_tolerance: 0.01          # 转弯目标容差 单位rad
